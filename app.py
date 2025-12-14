@@ -58,8 +58,8 @@ def overlay_heatmap(heatmap, image, alpha=0.4, colormap=cv2.COLORMAP_JET):
 
 # Streamlit UI
 st.set_page_config(page_title="Brain Tumor Detection", layout="centered")
-st.title("Brain Tumor MRI Classifier")
-st.write("Upload an MRI image to predict the tumor type.")
+st.title("🧠 Brain Tumor MRI Classifier")
+st.write("A CNN-based application for automated brain tumor classification from MRI scans.")
 
 uploaded_file = st.file_uploader("Choose an MRI image...", type=["jpg", "jpeg", "png"])
 
@@ -75,7 +75,13 @@ if uploaded_file is not None:
 
     # Show results
     st.subheader("Prediction Result:")
-    st.write(f"**Predicted Tumor Type:** {predicted_class.upper()}")
+
+    if predicted_class in ["glioma", "meningioma", "pituitary"]:
+        st.write("🛑 **Tumor Detected**")
+        st.write(f"**Tumor Type:** {predicted_class.upper()}")
+    else:
+        st.write("✅ **No Tumor Detected**")
+
     st.write(f"**Confidence:** {confidence:.2f}")
     st.bar_chart(dict(zip(categories, prediction[0])))
 
