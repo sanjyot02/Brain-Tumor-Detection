@@ -5,13 +5,13 @@ This project is a deep learning–based approach for automatic brain tumor detec
 
 The model classifies MRI scans into Glioma, Meningioma, Pituitary Tumor, or No Tumor and also provides visual explanation using Grad-CAM.
 
-### Dataset
+## Dataset
 
 **Brain Tumor MRI Dataset** ([Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset))
 
 **Classes:** Glioma, Meningioma, Pituitary, No Tumor
 
-### Model Architecture
+## Model Architecture
 
 - Input Size: **150 × 150 × 3**
 - CNN Layers:
@@ -24,7 +24,7 @@ The model classifies MRI scans into Glioma, Meningioma, Pituitary Tumor, or No T
 - Output:
   - Dense (4) + Softmax
 
-### Model Performance
+## Model Performance
 
 - **Test Accuracy:** **97%**
 - Evaluation performed using:
@@ -32,7 +32,7 @@ The model classifies MRI scans into Glioma, Meningioma, Pituitary Tumor, or No T
   - Confusion matrix
   - Classification report
 
-### Web Application
+## Web Application
 
 The Streamlit application allows users to:
 - Upload a brain MRI image
@@ -40,7 +40,7 @@ The Streamlit application allows users to:
 - Show prediction confidence
 - Visualize important regions using Grad-CAM heatmaps
 
-### How to Run the Project
+## How to Run the Project
 
 - Install Required Packages:
 
