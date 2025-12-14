@@ -54,6 +54,6 @@ pip install tensorflow numpy pandas matplotlib seaborn scikit-learn streamlit op
 streamlit run app.py
 ```
 
-### Note
+## Note
 
 This project is developed only for academic purposes and should not be used for real medical diagnosis.
